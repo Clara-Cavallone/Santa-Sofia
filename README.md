@@ -98,7 +98,7 @@
 
   <nav>
     <ul>
-      <li><a href="#storia">Storia</a></li>
+      <li><a href="Storia.html">Storia</a></li>
       <li><a href="#protagonisti">Protagonisti</a></li>
       <li><a href="#spazi">Spazi</a></li>
       <li><a href="#sensi">Cinque sensi</a></li>
