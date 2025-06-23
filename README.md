@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Visita Virtuale - Hagia Sophia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="stile.css">
 </head>
 <body>
+   <nav>
+      <ul class="navbar">
+    <li><a href="#storia" target="blank" title="Scopri la storia di Santa Sofia">Storia</a></li>
+    <li><a href="#protagonisti">Protagonisti</a></li>
+    <li><a href="spazi.html">Spazi</a></li>
+    <li><a href="#sensi">Cinque sensi</a></li>
+    <li><a href="#crediti">Crediti</a></li>
+    </ul>
+  </nav>
 
 <header>
   <div class="slideshow">
@@ -25,15 +34,7 @@
   </div>
 </header>
 
-<nav>
-  <ul>
-    <li><a href="#storia">Storia</a></li>
-    <li><a href="#protagonisti">Protagonisti</a></li>
-    <li><a href="#spazi">Spazi</a></li>
-    <li><a href="#sensi">Cinque sensi</a></li>
-    <li><a href="#crediti">Crediti</a></li>
-  </ul>
-</nav>
+
 
 <main id="inizia">
   <section id="progetto">
