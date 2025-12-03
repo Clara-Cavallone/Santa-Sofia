@@ -183,3 +183,8 @@ footer {
   font-size: 0.95rem;
   color: #555;
 }
+/* ---------------------- NAVBAR ACTIVE LINK ---------------------- */
+.navbar a.active {
+  color: #c69c6d !important;
+  text-decoration: underline;
+}
