@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santa Sofia</title>
+  <title>Spazi - Santa Sofia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,77 +11,50 @@
 <!-- NAVBAR -->
 <nav>
   <ul class="navbar">
-    <li><a href="#Home">Home</a></li> 
-    <li><a href="#storia">Storia</a></li>
-    <li><a href="#protagonisti">Protagonisti</a></li>
+    <li><a href="index.html#Home">Home</a></li> 
+    <li><a href="index.html#storia">Storia</a></li>
+    <li><a href="index.html#protagonisti">Protagonisti</a></li>
     <li><a href="spazi.html">Spazi</a></li>
-    <li><a href="#sensi">Cinque sensi</a></li>
-    <li><a href="#crediti">Crediti</a></li>
+    <li><a href="index.html#sensi">Cinque sensi</a></li>
+    <li><a href="index.html#crediti">Crediti</a></li>
   </ul>
 </nav>
 
-<!-- SEZIONI -->
-<section id="Home">
-  <header>
-    <h1>Santa Sofia</h1>
-    <p>Benvenuti nella visita virtuale di Santa Sofia</p>
-  </header>
-</section>
+<!-- CONTENUTO PRINCIPALE -->
+<main id="spazi-page" class="container my-5">
+  <h1>Spazi di Santa Sofia</h1>
+  <div class="gallery">
+    <div class="item">
+      <img src="images/spazio1.jpg" alt="Spazio 1">
+      <h3>Spazio 1</h3>
+      <p>Descrizione dello spazio 1</p>
+    </div>
+    <div class="item">
+      <img src="images/spazio2.jpg" alt="Spazio 2">
+      <h3>Spazio 2</h3>
+      <p>Descrizione dello spazio 2</p>
+    </div>
+    <!-- aggiungi altri spazi qui -->
+  </div>
+</main>
 
-<section id="storia">
-  <main>
-    <h2>Storia</h2>
-    <p>Testo sulla storia di Santa Sofia...</p>
-  </main>
-</section>
+<!-- FOOTER -->
+<footer class="text-center py-4">
+  &copy; 2025 Progetto Digital Humanities – Hagia Sophia. Tutti i diritti riservati.
+</footer>
 
-<section id="protagonisti">
-  <main>
-    <h2>Protagonisti</h2>
-    <p>Testo sui protagonisti...</p>
-  </main>
-</section>
-
-<section id="sensi">
-  <main>
-    <h2>Cinque sensi</h2>
-    <p>Testo sui cinque sensi...</p>
-  </main>
-</section>
-
-<section id="crediti">
-  <footer>
-    <p>Crediti</p>
-  </footer>
-</section>
-
-<!-- JS -->
+<!-- JS NAVBAR ACTIVE -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".navbar a");
-  const currentPath = window.location.pathname.split("/").pop();
-  const currentHash = window.location.hash ? window.location.hash : "";
+  const currentPath = window.location.pathname.split("/").pop().toLowerCase();
 
   navLinks.forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === currentPath || href === currentHash) link.classList.add("active");
+    let href = link.getAttribute("href").toLowerCase();
+    if (href === currentPath) {
+      link.classList.add("active");
+    }
   });
-
-  const sections = document.querySelectorAll("section[id]");
-  if (sections.length) {
-    window.addEventListener("scroll", function() {
-      let scrollPos = window.scrollY + 100;
-      sections.forEach(section => {
-        if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-          const id = section.getAttribute("id");
-          navLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + id) link.classList.add("active");
-          });
-        }
-      });
-    });
-  }
 });
 </script>
 
