@@ -12,6 +12,18 @@
 
   <link rel="stylesheet" href="stile.css">
 </head>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".navbar a");
+  const currentPage = window.location.pathname.split("/").pop(); 
+
+  /* --- Caso 1: pagina separata (es. spazi.html) --- */
+  navLinks.forEach(link => {
+    const linkHref = link.getAttribute("href");
+    if (linkHref === currentPage) {
+      link.classList.add("active");
+    }
+  });
 <body>
  <nav>
   <ul class="navbar">
